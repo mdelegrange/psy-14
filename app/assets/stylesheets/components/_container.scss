@@ -21,8 +21,10 @@
 }
 
 .psy-content {
+  color: $gray-psy;
   a {
     color: $black-psy;
+    text-decoration: underline;
   }
 }
 

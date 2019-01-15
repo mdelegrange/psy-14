@@ -18,20 +18,22 @@ body  {
   }
 }
 
-.home-link {
-  font-size: 30px;
-  color: $black-psy;
-  text-decoration: underline;
-  &:hover {
-    font-size: 35px;
-    color: $beige-psy;
-    text-decoration: none;
-  }
-}
-
 
 .home-content {
   p a {
     color: $beige-psy;
+  }
+}
+
+
+.btn-home-link {
+  font-size: 25px;
+  padding: 10px 20px;
+  background-color: rgba(230, 229, 210, 0.5);
+  border: 0;
+  color: black;
+  &:hover {
+    color: $beige-psy;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
