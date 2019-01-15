@@ -36,4 +36,9 @@ body  {
     color: $beige-psy;
     background-color: rgba(0, 0, 0, 0.5);
   }
+  @media(max-width: 720px) {
+    font-size: 20px;
+    padding: 5px 10px;
+    justify-content: center;
+  }
 }
