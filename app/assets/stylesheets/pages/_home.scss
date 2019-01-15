@@ -1,1 +1,37 @@
 // Specific CSS for your home-page
+body  {
+  background-color: white;
+}
+
+.home-presentation {
+
+  p {
+    color: black;
+  }
+}
+
+.home-menu {
+  margin-top: 60px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.home-link {
+  font-size: 30px;
+  color: $black-psy;
+  text-decoration: underline;
+  &:hover {
+    font-size: 35px;
+    color: $beige-psy;
+    text-decoration: none;
+  }
+}
+
+
+.home-content {
+  p a {
+    color: $beige-psy;
+  }
+}

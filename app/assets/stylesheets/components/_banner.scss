@@ -1,0 +1,25 @@
+.banner-home {
+  z-index: 0;
+  color: white;
+  min-height: 100vh;
+  background-size: cover !important;
+  background-position: top;
+  display: flex;
+  align-items: center;
+}
+
+.banner-pages {
+  color: $black-psy;
+  height: 38vh;
+  background-size: cover !important;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    margin-top: 80px;
+    color: $black-psy;
+    font-weight: bold;
+  }
+}

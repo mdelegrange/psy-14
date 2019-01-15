@@ -1,0 +1,55 @@
+.footer {
+  bottom: 0;
+  width: 100%;
+  background: $gray-psy;
+  padding: 0px 40px 20px 40px;
+  color: $beige-psy;
+  h2 {
+    margin:0;
+    a{
+      font-size: 20px;
+      text-decoration:none;
+    }
+  }
+  h3 {
+    font-size: 17px;
+  }
+  a {
+    font-size: 15px;
+    color: $beige-psy;
+  }
+}
+
+
+.footer-cliniciens {
+  padding: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end
+}
+
+.footer-names {
+  display:flex;
+  margin-top: 10px;
+  h2, h4 {
+    margin: 0;
+  }
+}
+
+.footer-name {
+  padding: 0;
+  margin-right: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  h2, h4 {
+    margin: 0;
+  }
+
+}
+

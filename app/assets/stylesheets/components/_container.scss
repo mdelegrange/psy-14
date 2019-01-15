@@ -1,0 +1,43 @@
+.psy-container {
+  width: 100%;
+  min-height: calc(75vh - 100px);
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 160px);
+}
+
+.btn-posts {
+  margin-top: 10px;
+}
+
+.psy-title {
+  color: $blue-psy;
+  font-size: 28px;
+}
+
+.psy-content {
+  a {
+    color: $black-psy;
+  }
+}
+
+.psy-container-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10%;
+  h2 {
+    color: $black-psy;
+  }
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+}
