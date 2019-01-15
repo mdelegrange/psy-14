@@ -15,7 +15,6 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
-gem "rufus-scheduler"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
