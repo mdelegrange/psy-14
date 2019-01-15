@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-home" style="background-image: linear-gradient(to top, rgba(126, 188, 230, 0.7) 0%, rgba(250, 250, 250, 0.6) 100%), url(<%= image_path 'picasso.jpg'%>);">
+  <div class="psy-container-home" >
+      <div class="home-presentation">
+
+      <div class="col-xs-12 col-md-6 home-menu text-center">
+        <h2 class="text-left"><%= link_to 'Vous cherchez un psy ?',  vous_cherchez_un_psy_path, class: 'home-link'  %></h2>
+        <h2 class="text-center"><%= link_to 'Nous orienter un patient',  nous_orienter_un_patient_path, class: 'home-link'  %></h2>
+        <h2 class="text-right"><%= link_to 'Pratiques professionnelles', pratiques_professionnelles_path, class: 'home-link'  %></h2>
+        </div>
+        <div class="col-xs-12 col-md-6 home-content">
+
+        <p>Ce site est consacré à notre activité de psychologue et a pour ambition de parler des questions que l'on se pose avant de consulter un professionnel ou simplement d’alimenter votre curiosité en la matière. Vous trouverez ici quelques informations concernant notre cabinet, installé à Caen, les prises en charge que nous proposons et des éléments permettant de vous repérer dans le monde des psys.</p>
+
+        <p>Nous avons de fait à cœur de donner quelques points de repère face aux nébuleux clichés autour des « psys » (afin d’éviter de les mettre à toutes les sauces).</p>
+
+        <p>N'hésitez pas à <%= link_to "nous contacter", contact_path %> pour toute demande d'informations complémentaires ; tout échange de personne à personne est préférable aux grandes généralités qui tombent toujours un peu à côté...</p>
+      </div>
+      </div>
+    </div>
+</div>

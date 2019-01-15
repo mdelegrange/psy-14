@@ -1,0 +1,28 @@
+<div class="banner-pages" style="background-image: linear-gradient(to bottom, rgba(230, 229, 210, 0.8) 10%, rgba(230, 229, 210, 0.5) 100%), url(<%= image_path 'bureau.jpg'%>);">
+  <h2 class="text-center">Espace local d'informations psy et liens</h2>
+</div>
+
+<div class="container psy-container">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h2 class= "text-center psy-title">Les événements à venir</h2>
+        <ul>
+          <% @posts.each do |post| %>
+          <li class="psy-content">
+            <a href=<%= post.url %> target="_blank"><%= post.title %></a>
+            <br>
+            <%= post.description %>
+          </li>
+          <% end %>
+        </ul>
+      <h2 class= "text-center psy-title">Liens</h2>
+        <ul>
+          <% @liens.each do |lien| %>
+          <li class="psy-content">
+            <a href=<%= lien.url %> target="_blank"><%= lien.title %></a>
+            <br>
+            <%= lien.description %>
+          </li>
+          <% end %>
+        </ul>
+  </div>
+</div>

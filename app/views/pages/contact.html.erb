@@ -1,0 +1,70 @@
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+<div class="banner-pages" style="background-image: linear-gradient(to bottom, rgba(230, 229, 210, 0.8) 10%, rgba(230, 229, 210, 0.5) 100%), url(<%= image_path 'bureau.jpg'%>);">
+  <h2 class="text-center">Nous contacter</h2>
+</div>
+
+<div class="container psy-container">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div>
+        <h2 class="text-center psy-title">Notre adresse:</h2>
+          <p class="text-center"> 9 Rue Général Giraud, 14000 Caen</p>
+          <p>Entre la rue de Bernières et la rue de l’oratoire, vous trouverez au 9 rue du Général Giraud notre cabinet (juste avant l’ancien passage Démogé).
+          Nous sommes situés au 3ème étage de cet immeuble (il y a un petit ascenseur qui n’est malheureusement pas accessible au fauteuil roulant).
+          Nous consultons uniquement sur rendez-vous.
+          Sur avis médical, nous pouvons envisager une entretien à votre domicile si votre état de santé le justifie.</p>
+          <p>Appelez-nous et nous conviendrons d’une rencontre afin de prendre le temps qu’il se doit pour échanger sur votre demande.</p>
+      </div>
+      <div id='map'></div>
+      <div class="text-center">
+        <%= image_tag "cabinet1.jpg", style: "height: 250px" %>
+        <%= image_tag "cabinet2.jpg", style: "height: 250px" %>
+      </div>
+
+    <div>
+      <h2 class="text-center psy-title">Nos numéros de téléphone:</h2>
+        <div class="flexbox">
+          <div class="text-center">
+            <p>Corentin Méheust-Roux </p>
+            <p><a href="tel:0231287759">02 31 28 77 59</a> / <a href="tel:0662347596">06 62 34 75 96</a></p>
+          </div>
+          <div class="text-center">
+            <p>Yves-Antoine Leroy </p>
+            <p><a href="tel:0667425253">06 67 42 52 53</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+<script src='https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js'></script>
+<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWRlbGVncmFuZ2UiLCJhIjoiY2pvaWc4dncxMDg1NDNwcW4yMXd1YzVobyJ9.CwiakOxAF3MQIuUK4fXn9Q';
+// eslint-disable-next-line no-undef
+const mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
+mapboxClient.geocoding.forwardGeocode({
+    query: '9 Rue Général Giraud, 14000 Caen',
+    autocomplete: false,
+    limit: 1
+})
+    .send()
+    .then(function (response) {
+        if (response && response.body && response.body.features && response.body.features.length) {
+            const feature = response.body.features[0];
+
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/streets-v9',
+                center: feature.center,
+                zoom: 13
+            });
+            map.addControl(new mapboxgl.NavigationControl());
+            new mapboxgl.Marker()
+                .setLngLat(feature.center)
+                .addTo(map);
+        }
+
+    });
+
+</script>
