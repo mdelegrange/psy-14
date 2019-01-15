@@ -16,6 +16,11 @@ body  {
     margin-top: 0;
     margin-bottom: 20px;
   }
+  @media(max-width: 720px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -41,3 +46,5 @@ body  {
     padding: 5px 10px;
   }
 }
+
+
