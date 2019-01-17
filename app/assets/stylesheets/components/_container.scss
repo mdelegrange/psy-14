@@ -18,6 +18,9 @@
 .psy-title {
   color: $blue-psy;
   font-size: 28px;
+  @media(max-width: 720px) {
+    font-size: 22px;
+  }
 }
 
 .psy-content {
@@ -25,6 +28,9 @@
   a {
     color: $black-psy;
     text-decoration: underline;
+  }
+  @media(max-width: 720px) {
+    font-size: 14px;
   }
 }
 

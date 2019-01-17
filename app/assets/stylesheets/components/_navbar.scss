@@ -16,6 +16,9 @@
       text-decoration: none;
     }
   }
+  @media(max-width: 720px) {
+    padding: 0px 10px;
+  }
 }
 
 /* Logo */
@@ -26,12 +29,21 @@
     color: #7C7D77;
     text-decoration: none;
     }
+  @media(max-width: 720px) {
+    h1 {
+      font-size: 16px;
+    }
+  }
 }
 
 .btn-navbar {
  &:hover {
   background-color: white;
  }
+ @media(max-width: 720px) {
+    font-size: 14px;
+    padding: 6px 6px;
+  }
 }
 
 /* Right section */
