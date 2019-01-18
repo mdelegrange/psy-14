@@ -2,7 +2,7 @@
   bottom: 0;
   width: 100%;
   background: $gray-psy;
-  padding: 0px 40px 20px 40px;
+  padding: 0px 40px 5px 40px;
   color: $beige-psy;
   h2 {
     margin:0;
@@ -65,5 +65,22 @@
     margin: 0;
   }
 
+}
+
+.footer-copyright {
+  p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: lighter;
+    margin: 0;
+    color: #878784;
+    a {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: lighter;
+      margin: 0;
+      color: #878784;
+    }
+  }
 }
 
